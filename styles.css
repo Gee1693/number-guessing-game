@@ -1,0 +1,124 @@
+:root {
+  --pm-bg-color: #222;
+  --pm-color: #fff;
+  --pm-font: "Press Start 2P", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media all {
+  body {
+    background-color: var(--pm-bg-color);
+    padding: 20px 20px;
+    font-family: var(--pm-font);
+    color: var(--pm-color);
+  }
+}
+
+@media screen {
+  /*Masthead*/
+  .masthead {
+    border-bottom: 3px solid var(--pm-color);
+    position: relative;
+    margin-bottom: 120px;
+  }
+
+  .btn {
+    background: none;
+    border: none;
+    background-color: var(--pm-color);
+    font-size: 25px;
+    font-family: inherit;
+    padding: 1rem 1rem;
+    cursor: pointer;
+  }
+
+  .check {
+    margin-left: 40px;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .btn:focus {
+    background-color: rgb(255, 255, 255, 0.8);
+  }
+
+  .topBar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    margin-bottom: 5rem;
+  }
+
+  .number-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .number {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--pm-color);
+    color: var(--pm-bg-color);
+    font-size: 30px;
+    text-align: center;
+    padding-top: 1rem;
+    position: absolute;
+    bottom: -30px;
+  }
+
+  /*Main Content*/
+  .main-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 100px;
+  }
+
+  .guess {
+    border: 2px solid var(--pm-color);
+    background: none;
+    height: 5rem;
+    width: 15rem;
+    font-size: 40px;
+    font-family: inherit;
+    color: var(--pm-color);
+    text-align: center;
+    padding: 10px 10px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .message {
+    margin-bottom: 60px;
+  }
+
+  .label-attempts {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .topBar {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .check {
+    margin-bottom: 60px;
+  }
+}
