@@ -15,19 +15,21 @@ function guessCheck() {
   // No number entered
   if (!guess) {
     msg.textContent = "No number entered";
-    // Guess is too low
-  } else if (guess < secretNum) {
-    msg.textContent = `📉 ${guess} is too low! Try again.`;
+  }
+  // Guess is wrong
+  else if (guess !== secretNum) {
     document.querySelector(".guess").value = guess;
     attempts--;
     document.querySelector(".attempts").textContent = attempts;
-    // Guess is too high
-  } else if (guess > secretNum) {
-    msg.textContent = `📈 ${guess} is too high! Try again.`;
-    attempts--;
-    document.querySelector(".attempts").textContent = attempts;
-    // Player wins
-  } else if (guess === secretNum) {
+
+    if (guess < secretNum) {
+      msg.textContent = `📉 ${guess} is too low!`;
+    } else if (guess > secretNum) {
+      msg.textContent = `📈 ${guess} is too high!`;
+    }
+  }
+  // Player wins
+  else if (guess === secretNum) {
     msg.textContent = "🎉 You win!";
     document.querySelector("body").style.backgroundColor = "#22c55e";
     document.querySelector(".number").textContent = secretNum;
@@ -37,7 +39,6 @@ function guessCheck() {
       document.querySelector(".highscore").textContent = highScore;
     }
   }
-
   // Player loses the game
   if (attempts < 1) {
     msg.textContent = "You lose!";
