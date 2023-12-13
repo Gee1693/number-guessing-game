@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live version of the number gueesing game](https://gee1693.github.io/number-guessing-game/)
+- Live Site URL: [Live version of the number guessing game](https://gee1693.github.io/number-guessing-game/)
 
 ## My process
 
